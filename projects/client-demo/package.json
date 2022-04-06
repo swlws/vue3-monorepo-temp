@@ -1,0 +1,15 @@
+{
+  "name": "@web/client-demo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite --config ../../vite/demo.vite.config.ts",
+    "build": " vite build --config ../../vite/demo.vite.config.ts --mode production",
+    "preview": "vite preview "
+  },
+  "dependencies": {
+    "@web/api": "workspace:^1.0.0",
+    "@web/core": "workspace:^1.0.0",
+    "@web/ui": "workspace:^1.0.0"
+  }
+}

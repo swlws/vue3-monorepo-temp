@@ -1,0 +1,11 @@
+# https://www.prettier.cn/docs/ignore.html
+
+# Ignore artifacts:
+api-doc
+dist
+node_modules
+public
+.vscode
+
+# Ignore all HTML files:
+*.html

@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["esnext", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@demo/*": ["projects/client-demo/src/*"],
+    }
+  },
+  "include": [
+    "packages/**/*.ts",
+    "packages/**/*.d.ts",
+    "packages/**/*.tsx",
+    "packages/**/*.vue",
+    "projects/**/*.ts",
+    "projects/**/*.d.ts",
+    "projects/**/*.tsx",
+    "projects/**/*.vue"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

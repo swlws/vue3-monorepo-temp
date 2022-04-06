@@ -1,0 +1,20 @@
+{
+  "name": "@web/api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0"
+  },
+  "dependencies": {
+    "@web/core": "workspace:^1.0.0",
+    "axios-business": "^1.0.4"
+  }
+}

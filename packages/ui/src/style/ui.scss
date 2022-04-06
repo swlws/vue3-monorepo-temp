@@ -1,0 +1,11 @@
+// 数据表格的项，回车换行
+.el-table .cell.el-tooltip {
+  white-space: break-spaces !important;
+  max-height: 200px;
+  overflow: auto;
+}
+
+.el-popper {
+  max-width: 400px !important;
+  line-height: 180% !important;
+}

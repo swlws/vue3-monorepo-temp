@@ -1,0 +1,4 @@
+node_modules
+dist/
+packages/**/node_modules
+projects/**/node_modules
