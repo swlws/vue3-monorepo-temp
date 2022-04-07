@@ -13,6 +13,8 @@
     "clean": "node script/clean.js",
     "doc:api": "sh script/api_doc.sh",
     "build:ui": "pnpm -C packages/ui run build",
+    "test:ui": "pnpm -C packages/ui run test",
+    "test:core": "pnpm -C packages/core run test",
     "dev:demo": "pnpm -C projects/client-demo run dev",
     "build:demo": "rimraf dist/client-demo && pnpm -C projects/client-demo run build",
     "build:all": "pnpm run build:demo",
@@ -34,10 +36,13 @@
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
     "@vitejs/plugin-vue": "^2.2.0",
+    "@vue/test-utils": "^2.0.0-rc.19",
+    "c8": "^7.11.0",
     "eslint": "^8.12.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.5.0",
+    "jsdom": "^19.0.0",
     "prettier": "^2.6.1",
     "rimraf": "^3.0.2",
     "sass": "^1.49.9",
@@ -45,6 +50,7 @@
     "unplugin-auto-import": "^0.6.8",
     "unplugin-vue-components": "^0.18.5",
     "vite": "^2.8.0",
+    "vitest": "^0.9.0",
     "vue-tsc": "^0.29.8"
   }
 }

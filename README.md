@@ -32,6 +32,12 @@ API 模块，通过配置文件，枚举需要使用的 API。最后，通过转
 
 Web 工程。所有的 Web 工程，基本都是通过`@web/core`、`@web/api`、`@web/ui`组装而成。
 
+# 测试
+
+使用`[vitest](https://vitest.dev/api/)`执行单元测试
+
+同时引入`@vue/test-utils` `jsdom`对`.vue`文件，执行单元测试
+
 # 文档
 
 采用`apidoc`，通过注释，自动生成 API 文档.
