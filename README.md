@@ -1,5 +1,7 @@
 # Web Monorepo
 
+[Everything you need to know about monorepos, and the tools to build them](https://monorepo.tools/#transparent-remote-execution)
+
 - 包管理器 pnpm，monorepo 架构
 - Web 框架 vue3
 - UI 框架 element-ui
