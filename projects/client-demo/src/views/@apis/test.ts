@@ -1,7 +1,7 @@
 import { ElMessage } from 'element-plus';
 
 import { HttpResponse, useLogger } from '@web/core';
-import { useApi } from '@web/api';
+import { useDemoApi as useApi } from '@web/api';
 let apiModules = useApi();
 let APIS = apiModules.test;
 

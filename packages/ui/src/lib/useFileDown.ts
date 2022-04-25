@@ -1,5 +1,5 @@
 import { THttpResponse } from '@web/core';
-import { useApi } from '@web/api';
+import { useCmApi as useApi } from '@web/api';
 import FileDown from '../components/BaseDownFile/main';
 import { AxiosResponse } from 'axios';
 import { lib } from 'weblibext';

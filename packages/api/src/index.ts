@@ -1,8 +1,5 @@
 import { ApiFunc, ApiModule, createApis } from 'axios-business';
 import { requestInterceptor, responseInterceptor } from './interceptor';
-import { useEnv } from '@web/core';
-
-const { getAppName } = useEnv;
 
 type Module = Record<string, { [key: string]: any }>;
 
@@ -23,7 +20,7 @@ function parseApiModule(ms: Module) {
   return apis;
 }
 
-function toFunc(type: string, modules: Record<string, ApiModule>) {
+function toFunc(modules: Record<string, ApiModule>) {
   let funcs = createApis({
     modules,
     timeout: 60 * 1000,
@@ -36,22 +33,29 @@ function toFunc(type: string, modules: Record<string, ApiModule>) {
   return funcs;
 }
 
-let apiCache: ApiFunc;
+let apiCache: Map<string, ApiFunc> = new Map();
+function generateApis(key: string, fn: () => Module) {
+  if (apiCache.has(key)) return apiCache.get(key) || {};
 
-export function useApi(): ApiFunc {
-  if (apiCache) return apiCache;
-
-  const type = getAppName();
-
-  let ps;
-  if (type === 'client-demo') {
-    ps = import.meta.globEager('./client-demo/*.ts');
-  } 
-
-  if (!ps) return {};
-
-  let funcs = toFunc(type, parseApiModule(ps));
-  apiCache = funcs;
+  let funcs = toFunc(parseApiModule(fn()));
+  apiCache.set(key, funcs);
 
   return funcs;
+}
+
+enum Keys {
+  DEMO = 'demo',
+  CM = 'cm',
+}
+
+export function useCmApi() {
+  return generateApis(Keys.CM, () => {
+    return import.meta.globEager('./common/*.ts');
+  });
+}
+
+export function useDemoApi() {
+  return generateApis(Keys.DEMO, () => {
+    return import.meta.globEager('./client-demo/*.ts');
+  });
 }

@@ -62,12 +62,12 @@ importers:
   packages/api:
     specifiers:
       '@web/core': workspace:^1.0.0
-      axios-business: ^1.0.4
+      axios-business: 1.0.5
       typescript: ^4.5.4
       vite: ^2.8.0
     dependencies:
       '@web/core': link:../core
-      axios-business: 1.0.4
+      axios-business: 1.0.5
     devDependencies:
       typescript: 4.6.3
       vite: 2.8.6_sass@1.49.9
@@ -704,8 +704,8 @@ packages:
     resolution: {integrity: sha1-x57Zf380y48robyXkLzDZkdLS3k=}
     dev: true
 
-  /axios-business/1.0.4:
-    resolution: {integrity: sha512-6cf2NC5YAk7bPqscYdf6mzIwHtwe3q/E9zW9E/BiVXf7aBYzH5bLr8j/Mx557YLQXKHvjHyy4gw5Y39TjS7ZEg==}
+  /axios-business/1.0.5:
+    resolution: {integrity: sha512-1BummEnsEmJG/Dxl+W/uoSgMtO1H/THcdL3ldHMXCbKYnBq74Z+NMGpEEVyOOCfw+t4Ps/ypJBI92gRmYJFRJQ==}
     dependencies:
       axios: 0.21.4
     transitivePeerDependencies:

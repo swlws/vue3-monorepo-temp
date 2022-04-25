@@ -15,6 +15,6 @@
   },
   "dependencies": {
     "@web/core": "workspace:^1.0.0",
-    "axios-business": "^1.0.4"
+    "axios-business": "1.0.5"
   }
 }

@@ -27,7 +27,7 @@ import { HttpResponse, useEnv, useToken } from '@web/core';
 const { hasUseToken, getClientId, getClientSecret } = useEnv;
 const { tokenExpire, updateToken } = useToken;
 
-import { useApi } from '@web/api';
+import { useCmApi as useApi } from '@web/api';
 let apiModules = useApi();
 let TOKEN_APIS = apiModules.token;
 

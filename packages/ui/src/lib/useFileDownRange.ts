@@ -1,4 +1,4 @@
-import { useApi } from '@web/api';
+import { useCmApi as useApi } from '@web/api';
 import { AxiosResponse } from 'axios';
 import { lib } from 'weblibext';
 import { THttpResponse } from '@web/core';
