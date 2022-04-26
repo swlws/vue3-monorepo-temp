@@ -3,7 +3,11 @@
     <div v-for="i in rows * cols" :key="i" :style="{ backgroundColor: colors[i] }"></div>
   </section>
 
-  <footer @click="setColors"> Reset </footer>
+  <footer>
+    <span @click="setColors">Reset Color</span>
+    <span @click="fullScreen">Full Screen</span>
+    <span @click="exitFullScreen">Exist Full Screen</span>
+  </footer>
 </template>
 
 <script setup lang="ts">
@@ -29,6 +33,32 @@ const setColors = () => {
 };
 
 setColors();
+
+function fullScreen() {
+  const ele = document.body as any;
+  if (ele.requestFullscreen) {
+    ele.requestFullscreen();
+  } else if (ele.mozRequestFullScreen) {
+    ele.mozRequestFullScreen();
+  } else if (ele.webkitRequestFullscreen) {
+    ele.webkitRequestFullscreen();
+  } else if (ele.msRequestFullscreen) {
+    ele.msRequestFullscreen();
+  }
+}
+
+function exitFullScreen() {
+  const ele = document as any;
+  if (ele.exitFullScreen) {
+    ele.exitFullScreen();
+  } else if (ele.mozCancelFullScreen) {
+    ele.mozCancelFullScreen();
+  } else if (ele.webkitExitFullscreen) {
+    ele.webkitExitFullscreen();
+  } else if (ele.msExitFullscreen) {
+    ele.msExitFullscreen();
+  }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -48,28 +78,33 @@ $size: 50;
 }
 
 footer {
-  width: 100px;
-  height: 100px;
-
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 
-  background-color: #fff;
-  border-radius: 50%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
   user-select: none;
 
-  opacity: 0.1;
-  transition: all 0.3s;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
 
+  opacity: 0.5;
+  transition: all 0.3s;
   &:hover {
-    cursor: pointer;
     opacity: 1;
+  }
+
+  > span {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+
+    transition: all 0.3s;
+    &:hover {
+      cursor: pointer;
+      color: #009afe;
+    }
   }
 }
 </style>
