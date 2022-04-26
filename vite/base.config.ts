@@ -64,7 +64,7 @@ export function usePlugins() {
  */
 export function useBuild(client: string): BuildOptions {
   return {
-    outDir: resolve(__dirname, '..', 'dist', client),
+    outDir: resolve(__dirname, '..', 'docs', client),
     assetsDir: 'static',
     emptyOutDir: false,
     target: 'esnext', // default

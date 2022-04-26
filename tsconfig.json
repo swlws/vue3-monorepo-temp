@@ -14,7 +14,7 @@
     "lib": ["esnext", "dom"],
     "baseUrl": ".",
     "paths": {
-      "@demo/*": ["projects/client-demo/src/*"],
+      "@demo/*": ["projects/demo/src/*"]
     }
   },
   "include": [

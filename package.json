@@ -15,8 +15,10 @@
     "build:ui": "pnpm run build --filter @web/ui",
     "test:ui": "pnpm test --filter @web/ui",
     "test:core": "pnpm test --filter @web/core",
-    "dev:demo": "pnpm dev --filter @web/client-demo",
-    "build:demo": "rimraf dist/client-demo && pnpm -C projects/client-demo run build",
+    "dev:demo": "pnpm dev --filter @web/demo",
+    "build:demo": "rimraf docs/demo && pnpm build --filter @web/demo",
+    "dev:rest": "pnpm dev --filter @web/rest",
+    "build:rest": "rimraf docs/rest && pnpm build --filter @web/rest",
     "build:all": "pnpm run build:demo",
     "publish": " sh script/publish.sh",
     "prettier": "prettier --write ."

@@ -56,6 +56,6 @@ export function useCmApi() {
 
 export function useDemoApi() {
   return generateApis(Keys.DEMO, () => {
-    return import.meta.globEager('./client-demo/*.ts');
+    return import.meta.globEager('./demo/*.ts');
   });
 }
