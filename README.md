@@ -43,3 +43,8 @@ Web 工程。所有的 Web 工程，基本都是通过`@web/core`、`@web/api`�
 # 文档
 
 采用`apidoc`，通过注释，自动生成 API 文档.
+
+# 工程演示
+
+- [效果演示](https://swlws.github.io/vue3-monorepo-temp/demo)
+- [休息一下](https://swlws.github.io/vue3-monorepo-temp/)
