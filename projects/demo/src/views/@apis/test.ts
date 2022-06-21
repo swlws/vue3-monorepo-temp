@@ -32,7 +32,7 @@ export function testGet() {
  * 测试POST请求
  */
 export function testPost() {
-  APIS.tetPost()
+  APIS.testPost()
     .then((res: HttpResponse) => {
       if (res && res.r0 === 0) return res.res;
 
